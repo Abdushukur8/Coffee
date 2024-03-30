@@ -119,6 +119,7 @@ a, button, input, textarea, svg *{
   left: 8.2px;
   top: 18px;
   border-radius: 20px;
+  transition: transform .5s, opacity .5s, background-color .5s;
 }
 .header__burger span:nth-child(1){
   transform: translateY(-10px);
@@ -128,6 +129,16 @@ a, button, input, textarea, svg *{
 }
 
 
+.navbar.bur_open .header__burger span:nth-child(1){
+  transform: translateY(0) rotate(45deg);  
+}
+.navbar.bur_open .header__burger span:nth-child(2){
+  opacity: 0;
+}
+.navbar.bur_open .header__burger span:nth-child(3){
+  transform: translateY(0) rotate(-45deg);
+}
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -136,14 +147,15 @@ a, button, input, textarea, svg *{
   height: 100px;
   border: 1px solid #000;
 }
-
 .navbar_list{
   display: inline-flex;
   align-items: center;
-  column-gap: 47px;
 }
-.navbar_list:last-child{
-  column-gap: 0;
+.navbar_list_item{
+  margin-right: 47px;
+}
+.navbar_list_item:last-child{
+  margin-right: 0;
 }
 
 .navbar_link{
@@ -161,7 +173,9 @@ a, button, input, textarea, svg *{
   flex-shrink: 0;
 }
 
-
+.header_logo_min{
+  display: none;
+}
 
 .navbar_search_div{
   display: flex;
@@ -194,9 +208,24 @@ a, button, input, textarea, svg *{
   flex-shrink: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1024px ) {
-  .navbar_list{
-    column-gap: 23px;
+  .navbar_list_item{
+    margin-right: 20px;
   }
   .navbar_vector{
     width: 75px;
@@ -215,11 +244,31 @@ a, button, input, textarea, svg *{
   .navbar{
     padding-left: 20px;
   }
-  .navbar_list{
-    display: none;
-  }
   .header__burger{
     display: block;
+    flex-shrink: 0;
+  }
+  .header_nav{
+    position: absolute;
+    left: -350px;
+    top: 0;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.355);
+    padding: 85px 200px 20px 20px;
+    transition: transform .5s;
+  }
+  .navbar_list{
+    display: block;
+  }
+  .navbar_link{
+    color: white;
+    font-size: 21px;
+    display: block;
+    padding: 10px 0;
+  }
+  .navbar.bur_open .header_nav {
+    transform: translateX(100%);
   }
 }
 @media (max-width: 610px ) {
@@ -233,5 +282,10 @@ a, button, input, textarea, svg *{
 @media (max-width: 425px ) {
   .header_logo{
     display: none;
+  }
+  .header_logo_min{
+    display: block;
+    width: 75px;
+    flex-shrink: 0;
   }
 }
