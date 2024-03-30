@@ -210,18 +210,28 @@ a, button, input, textarea, svg *{
   .header_welcome{
     display: none;
   }
-  .navbar_link{
-    font-size: 20px;
-  }
-  .navbar_search_link{
-    font-size: 20px;
-  }
 }
 @media (max-width: 820px ) {
+  .navbar{
+    padding-left: 20px;
+  }
   .navbar_list{
     display: none;
   }
   .header__burger{
     display: block;
+  }
+}
+@media (max-width: 610px ) {
+  .navbar{
+    padding-right: 10px;
+  }
+  .navbar_vector{
+    display: none;
+  }
+}
+@media (max-width: 425px ) {
+  .header_logo{
+    display: none;
   }
 }
