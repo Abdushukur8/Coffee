@@ -101,6 +101,31 @@ a, button, input, textarea, svg *{
 
 /* welcome */
 
+.header__burger{
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #000;
+}
+.header__burger span{
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  left: 5px;
+  top: 18px;
+}
+.header__burger span:nth-child(1){
+  transform: translateY(-10px);
+}
+.header__burger span:nth-child(3){
+  transform: translateY(10px);
+}
+
+
 .navbar{
   display: flex;
   justify-content: space-between;
