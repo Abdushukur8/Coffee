@@ -1,0 +1,197 @@
+/* anton-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/anton-v25-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/space-mono-v13-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/space-mono-v13-latin-italic.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/space-mono-v13-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-700italic - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/space-mono-v13-latin-700italic.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+body {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  color: #202020;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Anton' ;
+}
+a{
+  text-decoration: none;
+}
+
+a, button, input, textarea, svg *{
+  transition-duration: 500ms ;
+}
+
+.container{
+  max-width: 1935px;
+  margin: 0 auto;
+}
+
+/* header  */
+
+/* welcome  */
+
+.header_welcome{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  background-color: #1D1D1B;
+}
+.header_welcome_txt{
+  line-height: 14px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0%;
+}
+
+/* welcome */
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.navbar_list{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 47px;
+}
+.navbar_list:last-child{
+  column-gap: 0;
+}
+
+.navbar_link{
+  font-size: 17px;
+  color: #202020;
+}
+.navbar_link:hover{
+  text-shadow: 0px 0px 10px #000;
+  color: #000;
+}
+
+.header_logo{
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+
+.navbar_search_div{
+  display: flex;
+  column-gap: 36px;
+}
+
+.navbar_search{
+  display: flex;
+  align-items: center;
+  column-gap: 27px;
+}
+
+.navbar_search_link{
+  color: #202020;
+  font-size: 17px;
+}
+.navbar_search_link:hover{
+  text-shadow: 0px 0px 10px #000;
+  color: #000;
+}
+.navbar_vector{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  border-left: 1px solid #000;
+  height: 100px;
+}
+.navbar_vector_img{
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px ) {
+  .navbar_list{
+    column-gap: 23px;
+  }
+  .navbar_vector{
+    width: 75px;
+    height: 80px;
+  }
+  .navbar{
+    height: 80px;
+  }
+}
+@media (max-width: 880px ) {
+  .header_welcome{
+    display: none;
+  }
+  .navbar_link{
+    font-size: 20px;
+  }
+  .navbar_search_link{
+    font-size: 20px;
+  }
+}
+@media (max-width: 820px ) {
+  .navbar_list{
+    display: none;
+  }
+}
