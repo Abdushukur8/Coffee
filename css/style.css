@@ -53,7 +53,9 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
+:root{
+  --color-coffee: #6f4e37;
+}
 
 body {
   font-family: 'Space Mono';
@@ -83,6 +85,10 @@ a, button, input, textarea, svg *{
 /* header  */
 
 /* welcome  */
+
+.header{
+  box-shadow: 0px 0px 70px var(--color-coffee);
+}
 
 .header_welcome{
   display: flex;
@@ -146,6 +152,7 @@ a, button, input, textarea, svg *{
   padding-left: 40px;
   height: 100px;
   border: 1px solid #000;
+  
 }
 .navbar_list{
   display: inline-flex;
@@ -250,13 +257,14 @@ a, button, input, textarea, svg *{
   }
   .header_nav{
     position: absolute;
-    left: -350px;
+    left: -250px;
     top: 0;
-    width: 350px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.355);
-    padding: 85px 200px 20px 20px;
+    width: 250px;
+    backdrop-filter: blur(20px);
+    background-color: #6f4e37bd;
+    padding: 75px 20px 20px 20px;
     transition: transform .5s;
+    border-radius: 0 0 20px 0;
   }
   .navbar_list{
     display: block;
