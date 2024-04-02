@@ -352,10 +352,10 @@ a, button, input, textarea, svg *{
     left: -250px;
     top: 0;
     width: 250px;
-    backdrop-filter: blur(20px);
-    background-color: #6f4e37bd;
+    backdrop-filter: blur(10px);
+    background-color: #0000006e;
     padding: 75px 20px 20px 20px;
-    transition: transform .5s;
+    transition: transform .5s, box-shadow .5s;
     border-radius: 0 0 20px 0;
     z-index: 99;
   }
@@ -370,6 +370,7 @@ a, button, input, textarea, svg *{
   }
   .navbar.bur_open .header_nav {
     transform: translateX(100%);
+    box-shadow: 5px 2px 30px black;
   }
   .header_search.header_search_active{
     width: 150px;
